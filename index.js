@@ -2,8 +2,11 @@ import dot from 'dotenv'
 import express from 'express'
 import mongoose from 'mongoose'
 
+import routes from './src/routes.js'
+
 const app = express()
 app.use(express.json())
+app.use(routes)
 
 dot.config().parsed
 
